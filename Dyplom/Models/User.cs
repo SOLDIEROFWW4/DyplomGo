@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MainApp.Models
+namespace Dyplom.Models
 {
     class User
     {

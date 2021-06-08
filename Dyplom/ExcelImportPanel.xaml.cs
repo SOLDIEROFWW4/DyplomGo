@@ -15,16 +15,16 @@ using System.Windows.Shapes;
 namespace Dyplom
 {
     /// <summary>
-    /// Логика взаимодействия для ControlPanel.xaml
+    /// Логика взаимодействия для ExcelImportPanel.xaml
     /// </summary>
-    public partial class ControlPanel : Window
+    public partial class ExcelImportPanel : Window
     {
-        public ControlPanel()
+        public ExcelImportPanel()
         {
             InitializeComponent();
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void AddListOfStudentBtn_Click(object sender, RoutedEventArgs e)
         {
 
         }

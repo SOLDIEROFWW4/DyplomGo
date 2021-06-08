@@ -5,10 +5,10 @@ using System.Windows.Input;
 using System.Linq;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using MainApp.Models;
+using Dyplom.Models;
 using System.Data.Entity;
 
-namespace MainApp
+namespace Dyplom
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -30,12 +30,12 @@ namespace MainApp
             w1.Show();
         }
 
-        private void OpenUsersPanel()
+        private void OpenManagementMenuPanel()
         {
             Hide();
-            Window2 w2 = new Window2();
-            w2.Owner = this;
-            w2.Show();
+            ManagementMenuWindow managementMenuWindow = new ManagementMenuWindow();
+            managementMenuWindow.Owner = this;
+            managementMenuWindow.Show();
         }
 
         private void Button_Login_Click(object sender, RoutedEventArgs e)
@@ -68,7 +68,7 @@ namespace MainApp
                     if (management != null)
                         if (management.ManagementPassword == passTextBox.Password.ToString())
                         {
-                            OpenUsersPanel();
+                            OpenManagementMenuPanel();
                         }
                         else
                         {

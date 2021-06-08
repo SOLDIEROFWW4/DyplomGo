@@ -1,6 +1,7 @@
-﻿using System.Data.Entity;
+﻿using Dyplom.Models;
+using System.Data.Entity;
 
-namespace MainApp.Models
+namespace Dyplom.Models
 {
     class ModelContext : DbContext
     {
@@ -12,6 +13,8 @@ namespace MainApp.Models
         public DbSet<Students> Students { get; set; }
         public DbSet<LeadTeachers> LeadTeachers { get; set; }
         public DbSet<Management> Management { get; set; }
+
+        public DbSet<Classes> Classes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -5,14 +5,14 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<MainApp.Models.ModelContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Dyplom.Models.ModelContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(MainApp.Models.ModelContext context)
+        protected override void Seed(Dyplom.Models.ModelContext context)
         {
             //  This method will be called after migrating to the latest version.
 

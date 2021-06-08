@@ -1,19 +1,15 @@
-﻿<Window x:Name="ManagementMenuWindow" x:Class="Dyplom.MainWindow"
+﻿<Window x:Class="Dyplom.ManagementMenuWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dyplom"
         mc:Ignorable="d"
-        Title="Меню администратора" Height="429.6" Width="450" Icon="user.png" Background="CadetBlue" WindowStartupLocation="CenterScreen">
+        Title="Меню адмистратора" Height="450" Width="400" Icon="user.png" Background="CadetBlue" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="245"/>
-            <RowDefinition Height="330"/>
-        </Grid.RowDefinitions>
-        <Button x:Name="UMPanelBtn"  HorizontalAlignment="Right" Content="Управление пользователями" Width="245" Height="Auto" Margin="0,25,95,145" Click="UMPanelBtn_Click" Cursor="Hand" Style="{StaticResource MaterialDesignFlatLightBgButton}" RenderTransformOrigin="0.502,0.5" Background="CadetBlue" BorderBrush="CadetBlue"/>
-        <Button x:Name="MainPanelBtn"  HorizontalAlignment="Right" Content="Управление данными учащихся" Width="245" Height="Auto" Margin="0,145,95,30" Click="MainPanelBtn_Click" Cursor="Hand" Style="{StaticResource MaterialDesignFlatLightBgButton}" RenderTransformOrigin="0.502,0.5" Background="CadetBlue" BorderBrush="CadetBlue"/>
-        <Button x:Name="StatisticPanelBtn"  HorizontalAlignment="Right" Content="Статистика по учащимся" Width="245" Height="Auto" Margin="0,35,95,225" Click="StatisticPanelBtn_Click" Cursor="Hand" Style="{StaticResource MaterialDesignFlatLightBgButton}" RenderTransformOrigin="0.502,0.5" Background="CadetBlue" BorderBrush="CadetBlue" Grid.Row="1"/>
+        <Button x:Name="UMPanelBtn" Content="Управление пользователями" HorizontalAlignment="Left" Margin="75,41,0,0" VerticalAlignment="Top" Width="250" Height="100" Background="CadetBlue" Click="UMPanelBtn_Click" BorderBrush="CadetBlue"/>
+        <Button x:Name="MainPanelBtn" Content="Основная панель" HorizontalAlignment="Left" Margin="74,161,0,0" VerticalAlignment="Top" Width="250" Height="100" Background="CadetBlue" Click="MainPanelBtn_Click" BorderBrush="CadetBlue"/>
+        <Button x:Name="StatisticPanelBtn" Content="Показать" HorizontalAlignment="Left" Margin="74,281,0,0" VerticalAlignment="Top" Width="250" Height="100" Background="CadetBlue" Click="StatisticPanelBtn_Click" BorderBrush="CadetBlue"/>
 
     </Grid>
 </Window>

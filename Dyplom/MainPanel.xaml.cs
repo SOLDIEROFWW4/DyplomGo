@@ -5,17 +5,17 @@ using System.Windows.Input;
 using System.Linq;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using MainApp.Models;
+using Dyplom.Models;
 using System.Data.Entity;
 
-namespace MainApp
+namespace Dyplom
 {
     /// <summary>
     /// Логика взаимодействия для Window1.xaml
     /// </summary>
     public partial class Window1 : Window
     {
-        ModelContext db;       
+        ModelContext db;
         public Window1()
         {
             InitializeComponent();
@@ -24,6 +24,8 @@ namespace MainApp
             studentInfoGrid.Items.Clear();
             db.Students.Load();
             studentInfoGrid.ItemsSource = db.Students.Local.ToBindingList();
+
+            db.Classes.Load();
 
             this.Closing += MainWindow_Closing;
 
@@ -260,6 +262,77 @@ namespace MainApp
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void classesShowBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ModelContext db;
+
+            db = new ModelContext();
+            switch (StudyYearComboBox.SelectedIndex)
+            {
+                case (0):
+                    {
+                        db.Classes.Where(s => s.classid == 1).Load();
+                        break;
+                    }
+                case (1):
+                    {
+                        db.Classes.Where(s => s.StudyYear == 5).Load();
+                        break;
+                    }
+                case (2):
+                    {
+                        db.Classes.Where(s => s.StudyYear == 4).Load();
+                        break;
+                    }
+            }
+
+            switch (GradeSymbolComboBox.SelectedIndex)
+            {
+                case (0):
+                    {
+                        db.Classes.Where(s => s.GradeSymbol == "А").Load();
+                        break;
+                    }
+                case (1):
+                    {
+                        db.Classes.Where(s => s.GradeSymbol == "Б").Load();
+                        break;
+                    }
+                case (2):
+                    {
+                        db.Classes.Where(s => s.GradeSymbol == "В").Load();
+                        break;
+                    }
+            }
+            studentInfoGrid.ItemsSource = db.Students.Local.ToBindingList();
+        }
+
+        private void importExcelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OpenExcelImportMenu();
+        }
+
+        private void exportExcelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OpenExcelExportMenu();
+        }
+
+        private void OpenExcelExportMenu()
+        {
+            Hide();
+            ExcelImportPanel excelImport = new ExcelImportPanel();
+            excelImport.Owner = this;
+            excelImport.Show();
+        }
+
+        private void OpenExcelImportMenu()
+        {
+            Hide();
+            ExcelExportPanel excelExport = new ExcelExportPanel();
+            excelExport.Owner = this;
+            excelExport.Show();
         }
     }
 }

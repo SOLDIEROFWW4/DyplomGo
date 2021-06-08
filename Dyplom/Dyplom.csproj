@@ -79,8 +79,17 @@
     <Compile Include="ControlPanel.xaml.cs">
       <DependentUpon>ControlPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ExcelExportPanel.xaml.cs">
+      <DependentUpon>ExcelExportPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelImportPanel.xaml.cs">
+      <DependentUpon>ExcelImportPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPanel.xaml.cs">
       <DependentUpon>MainPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementMenuWindow.xaml.cs">
+      <DependentUpon>ManagementMenuWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202106081457069_Managements.cs" />
     <Compile Include="Migrations\202106081457069_Managements.designer.cs">
@@ -101,11 +110,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MainPanel.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="ExcelExportPanel.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ManagementMenuWindow.xaml">
+    <Page Include="ExcelImportPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPanel.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -117,13 +130,13 @@
       <DependentUpon>AuthPanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\LeadTeachers.cs" />
-    <Compile Include="ManagementMenuWindow.xaml.cs">
-      <DependentUpon>ManagementMenuWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Page Include="Management Forms\UMPanel.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManagementMenuWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

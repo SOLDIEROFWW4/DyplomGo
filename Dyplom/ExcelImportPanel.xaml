@@ -1,0 +1,13 @@
+﻿<Window x:Class="Dyplom.ExcelImportPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dyplom"
+        mc:Ignorable="d"
+        Title="Добавление данный из Excel" Height="200" Width="400" Icon="user.png" Background="CadetBlue" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button x:Name="AddListOfStudentBtn" Content="Добавить список учащихся" HorizontalAlignment="Left" Margin="70,39,0,0" VerticalAlignment="Top" Width="250" Height="100" Background="CadetBlue" Click="AddListOfStudentBtn_Click" BorderBrush="CadetBlue"/>
+
+    </Grid>
+</Window>
