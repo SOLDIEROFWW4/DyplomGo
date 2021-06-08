@@ -77,8 +77,8 @@ namespace MainApp
                     }
                 case (1):
                     {
-                        db.Students.Where(s => s.Birthdate.Contains(findTextBox.Text)).Load();
-                        MessageBox.Show("Поиск записи в базе данных прошло успешно!", "Уведомление от системы");
+                        //db.Students.Where(s => s.Birthdate.Contains(findTextBox.Text)).Load();
+                        //MessageBox.Show("Поиск записи в базе данных прошло успешно!", "Уведомление от системы");
                         break;
                     }
                 case (2):

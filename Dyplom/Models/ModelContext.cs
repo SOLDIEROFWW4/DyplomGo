@@ -15,7 +15,7 @@ namespace MainApp.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Students>().ToTable("Students");
+            modelBuilder.Entity<Management>().ToTable("Management");
         }
     }
 }

@@ -10,7 +10,7 @@ namespace MainApp.Models
     {
         public int id { get; set; }
         public string studentName { get; set; }
-        public string Birthdate { get; set; }
+        //public string Birthdate { get; set; }
         public string homeAdressReg { get; set; }
         public string homeAdressRel { get; set; }
         public string studentTel { get; set; }

@@ -26,7 +26,6 @@
                 <DataGrid AutoGenerateColumns="False" x:Name="studentInfoGrid" Margin="-14,25,13,28" Cursor="Hand">
                     <DataGrid.Columns>
                         <DataGridTextColumn Binding="{Binding studentName}" Header="Имя учащегося" Width="100"/>
-                        <DataGridTextColumn Binding="{Binding Birthdate}" Header="Дата рождения студента" Width="100"/>
                         <DataGridTextColumn Binding="{Binding homeAdressReg}" Header="Домашний адрес регистрации" Width="100"/>
                         <DataGridTextColumn Binding="{Binding homeAdressRes}" Header="Домашний адрес проживания" Width="100"/>
                         <DataGridTextColumn Binding="{Binding studentTel}" Header="Телефон студента" Width="100"/>

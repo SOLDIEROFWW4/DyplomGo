@@ -24,5 +24,20 @@ namespace Dyplom
         {
             InitializeComponent();
         }
+
+        private void UMPanelBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MainPanelBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void StatisticPanelBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

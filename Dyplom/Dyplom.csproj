@@ -82,7 +82,12 @@
     <Compile Include="MainPanel.xaml.cs">
       <DependentUpon>MainPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106081457069_Managements.cs" />
+    <Compile Include="Migrations\202106081457069_Managements.designer.cs">
+      <DependentUpon>202106081457069_Managements.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Classes.cs" />
     <Compile Include="Models\Students.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Management Forms\UMPanel.xaml.cs">
@@ -100,7 +105,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="ManagementMenuWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -112,8 +117,8 @@
       <DependentUpon>AuthPanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\LeadTeachers.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="ManagementMenuWindow.xaml.cs">
+      <DependentUpon>ManagementMenuWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Management Forms\UMPanel.xaml">
@@ -137,6 +142,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\202106081457069_Managements.resx">
+      <DependentUpon>202106081457069_Managements.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
