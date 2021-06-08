@@ -13,10 +13,10 @@ namespace Dyplom
     /// <summary>
     /// Логика взаимодействия для Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class MainPanel : Window
     {
         ModelContext db;
-        public Window1()
+        public MainPanel()
         {
             InitializeComponent();
 

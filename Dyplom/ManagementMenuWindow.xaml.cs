@@ -22,7 +22,7 @@ namespace Dyplom
         private void OpenUsersPanel()
         {
             Hide();
-            Window2 w2 = new Window2();
+            UMPanel w2 = new UMPanel();
             w2.Owner = this;
             w2.Show();
         }
@@ -30,7 +30,7 @@ namespace Dyplom
         private void OpenMainPanel()
         {
             Hide();
-            Window1 w1 = new Window1();
+            MainPanel w1 = new MainPanel();
             w1.Owner = this;
             w1.Show();
         }

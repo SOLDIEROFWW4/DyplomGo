@@ -38,13 +38,13 @@ namespace Dyplom
             Excel.DisplayAlerts = false;
 
             var sheets = wb.Sheets[1];
-            sheets.Cells[3, 2].value = "21";
-            sheets.Cells[2, 3].value = "26";
-            sheets.Cells[4, 3].value = "24";
+            sheets.Cells[3, 2].value = "4";
+            sheets.Cells[2, 3].value = "0";
+            sheets.Cells[4, 3].value = "0";
 
-            wb.SaveAs("D:\\Documents\\Предметы\\Диплом\\ExampleComplete.xlsx");
+            wb.SaveAs("D:\\Documents\\Предметы\\Диплом\\ExampleCompleteSecond.xlsx");
 
-            System.Diagnostics.Process.Start(@"D:\\Documents\\Предметы\\Диплом\\ExampleComplete.xlsx");
+            System.Diagnostics.Process.Start(@"D:\\Documents\\Предметы\\Диплом\\ExampleCompleteSecond.xlsx");
         }
 
         private void StudentDataExpBtn_Click(object sender, RoutedEventArgs e)

@@ -19,10 +19,10 @@ namespace Dyplom
     /// <summary>
     /// Логика взаимодействия для Window2.xaml
     /// </summary>
-    public partial class Window2 : Window
+    public partial class UMPanel : Window
     {
         ModelContext db;
-        public Window2()
+        public UMPanel()
         {
             InitializeComponent();
 

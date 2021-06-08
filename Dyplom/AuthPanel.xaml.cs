@@ -25,7 +25,7 @@ namespace Dyplom
         private void OpenMenu()
         {
             Hide();
-            Window1 w1 = new Window1();
+            MainPanel w1 = new MainPanel();
             w1.Owner = this;
             w1.Show();
         }

@@ -14,7 +14,7 @@
                     <DropShadowEffect BlurRadius="20" Color="LightGray" ShadowDepth="0"></DropShadowEffect>
                 </Border.Effect>
                 <StackPanel>
-                    <TextBlock Text="Приветствуем в панели администратора!" TextAlignment="Center" FontSize="20" FontWeight="Bold" Margin="0 0 0 20"></TextBlock>
+                    <TextBlock Text="Приветствуем в панели авторизации!" TextAlignment="Center" FontSize="20" FontWeight="Bold" Margin="0 0 0 20"></TextBlock>
 
 
                     <TextBox x:Name="loginTextBox" materialDesign:HintAssist.Hint="Введите Ваш логин для входа" Cursor="Hand" Style="{StaticResource MaterialDesignFloatingHintTextBox}" ></TextBox>
