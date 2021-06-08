@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Dyplom"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Рабочая панель" Height="775" Width="1550" Icon="Resources/user.png" Background="CadetBlue" WindowStartupLocation="CenterScreen">
+        Title="Рабочая панель" Height="775" Width="1550" Icon="user.png" Background="CadetBlue" WindowStartupLocation="CenterScreen">
 
     <Grid Margin="0,6,0,-5">
         <Grid.ColumnDefinitions>
@@ -59,9 +59,9 @@
         </Border>
         <Grid Margin="280,119.6,29.453,14.8" Grid.Row="1" Grid.ColumnSpan="3">
             <Button x:Name="updateBtn"  HorizontalAlignment="Right" Content="Обновить" Width="237" Height="Auto" Margin="0,52,554.547,10" Click="updateBtn_Click" Cursor="Hand" Style="{StaticResource MaterialDesignFlatLightBgButton}" Background="CadetBlue" BorderBrush="CadetBlue"/>
-            <Button x:Name="deleteBtn"  HorizontalAlignment="Right" Content="Удалить" Width="240" Height="Auto" Margin="0,52,871.8,10.2" Click="deleteBtn_Click" Cursor="Hand" Style="{StaticResource ResourceKey=MaterialDesignFlatLightBgButton}" Background="CadetBlue" BorderBrush="CadetBlue"/>
-            <Button x:Name="restartBtn" Content="К началу" Height="Auto" Margin="762,52,0,10" Click="restartBtn_Click" Cursor="Hand" Style="{StaticResource ResourceKey=MaterialDesignFlatLightBgButton}" HorizontalAlignment="Left" Width="240" BorderBrush="CadetBlue" Background="CadetBlue"/>
-            <Button x:Name="findBtn"  HorizontalAlignment="Right" Content="Найти" Width="243" Height="Auto" Margin="-201,52,1192.8,10.2" Click="findBtn_Click" Cursor="Hand" Style="{StaticResource ResourceKey=MaterialDesignFlatLightBgButton}" RenderTransformOrigin="0.502,0.5" Background="CadetBlue" BorderBrush="CadetBlue"/>
+            <Button x:Name="deleteBtn"  HorizontalAlignment="Right" Content="Удалить" Width="240" Height="Auto" Margin="0,52,871.8,10.2" Click="deleteBtn_Click" Cursor="Hand" Style="{StaticResource MaterialDesignFlatLightBgButton}" Background="CadetBlue" BorderBrush="CadetBlue"/>
+            <Button x:Name="restartBtn" Content="К началу" Height="Auto" Margin="762,52,0,10" Click="restartBtn_Click" Cursor="Hand" Style="{StaticResource MaterialDesignFlatLightBgButton}" HorizontalAlignment="Left" Width="240" BorderBrush="CadetBlue" Background="CadetBlue"/>
+            <Button x:Name="findBtn"  HorizontalAlignment="Right" Content="Найти" Width="243" Height="Auto" Margin="-201,52,1192.8,10.2" Click="findBtn_Click" Cursor="Hand" Style="{StaticResource MaterialDesignFlatLightBgButton}" RenderTransformOrigin="0.502,0.5" Background="CadetBlue" BorderBrush="CadetBlue"/>
         </Grid>
         <Label Content="Критерии поиска" Margin="10,440,93.8,262.8" Grid.RowSpan="2"/>
         <ComboBox x:Name="findComboBox" HorizontalAlignment="Left" Margin="10,9.6,0,0" VerticalAlignment="Top" Width="230" Height="35" Grid.Row="1">
@@ -129,6 +129,15 @@
         </ComboBox>
         <TextBox x:Name="findTextBox" HorizontalAlignment="Left" Height="33" Margin="102.547,443,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Grid.RowSpan="2" Grid.Column="2"/>
         <Button x:Name="exportButton" Content="Excel" HorizontalAlignment="Left" Margin="233,-2,0,0" VerticalAlignment="Top" Width="102" Height="27" Background="CadetBlue" Click="Button_Click" Grid.Column="2" BorderBrush="CadetBlue"/>
-        <Label x:Name="welcomeLabel" Content="Здравствуйте, " HorizontalAlignment="Left" Margin="18,3,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.433,-0.078" Width="222"/>
+        <ComboBox x:Name="StudyYearComboBox" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="50" Height="18" Grid.ColumnSpan="2">
+        <ComboBoxItem Content="4" />
+        <ComboBoxItem Content="5" />
+        <ComboBoxItem Content="5" />
+        </ComboBox>
+        <ComboBox x:Name="GradeSymbolComboBox" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Top" Width="50" Height="18" Grid.ColumnSpan="2">
+        <ComboBoxItem Content="А" />
+        <ComboBoxItem Content="Б" />
+        <ComboBoxItem Content="В" />
+        </ComboBox>
     </Grid>
 </Window>

@@ -6,7 +6,6 @@ namespace MainApp.Models
     {
         public ModelContext() : base("DefaultConnection")
         {
-
         }
 
         public DbSet<User> Users { get; set; }

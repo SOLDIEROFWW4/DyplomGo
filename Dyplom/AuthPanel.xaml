@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MainApp"
+        xmlns:local="clr-namespace:Dyplom"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Панель авторизации" Height="450" Width="800" Icon="user.png" ResizeMode="NoResize" ShowInTaskbar="False">
@@ -18,13 +18,13 @@
 
 
                     <TextBox x:Name="loginTextBox" materialDesign:HintAssist.Hint="Введите Ваш логин для входа" Cursor="Hand" Style="{StaticResource MaterialDesignFloatingHintTextBox}" ></TextBox>
-                    <PasswordBox x:Name="passTextBox" materialDesign:HintAssist.Hint="Введите Ваш пароль для входа" Cursor="Hand" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"></PasswordBox>
+                    <PasswordBox x:Name="passTextBox" materialDesign:HintAssist.Hint="Введите Ваш пароль для входа" Cursor="Hand" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0,0,-0.4,0"></PasswordBox>
                     <Grid>
                         <Button x:Name="enterButton" HorizontalAlignment="Right" Content="Войти" Width="450" Margin="0,20,-0.4,20" Click="Button_Login_Click" Cursor="Hand"></Button>
                     </Grid>
                 </StackPanel>
             </Border>
         </Border>
-        <CheckBox x:Name="cbLeadTeachers" Content="Войти как классный руководитель" HorizontalAlignment="Left" Margin="176,300,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbLeadTeachers" Content="Войти как классный руководитель" HorizontalAlignment="Left" Margin="176,289,0,0" VerticalAlignment="Top" Cursor="Hand" Checked="cbLeadTeachers_Checked"/>
     </Grid>
 </Window>

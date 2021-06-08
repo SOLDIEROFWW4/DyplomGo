@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MainApp"
         mc:Ignorable="d"
-        Title="Управление пользователями" Height="380" Width="1473" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Icon="Resources/user.png" Background="CadetBlue">
+        Title="Управление пользователями" Height="380" Width="1473" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Icon="/Dyplom;component/user.png" Background="CadetBlue">
     <Grid Margin="0,0,3,0.4">
         <Border x:Name="managementInfoGrid" MinWidth="450" Margin="0,10,219.2,0" Background="#ffffff" VerticalAlignment="Top" HorizontalAlignment="Right" CornerRadius="20" Height="322" Width="477">
             <DataGrid HorizontalAlignment="Left" Height="302" Margin="10,10,0,0" VerticalAlignment="Top" Width="459" SelectionChanged="DataGrid_SelectionChanged" x:Name="managementsInfoGrid" AutoGenerateColumns="False">

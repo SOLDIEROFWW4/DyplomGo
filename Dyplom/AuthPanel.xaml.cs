@@ -99,6 +99,11 @@ namespace MainApp
                 }
             }*/
         }
+
+        private void cbLeadTeachers_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
 }

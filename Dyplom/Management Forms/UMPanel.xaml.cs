@@ -56,7 +56,7 @@ namespace MainApp
         private void deleteManagementBtn_Click(object sender, RoutedEventArgs e)
         {
             {
-                if (managementsInfoGrid.SelectedItems.Count > 0)
+                /*if (managementsInfoGrid.SelectedItems.Count > 0)
                 {
                     for (int i = 0; i < managementsInfoGrid.SelectedItems.Count; i++)
                     {
@@ -69,6 +69,7 @@ namespace MainApp
                     }
                 }
                 db.SaveChanges();
+            }*/
             }
         }
         private void updateBtnLeadTeachers_Click(object sender, RoutedEventArgs e)
