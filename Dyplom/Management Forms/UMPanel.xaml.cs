@@ -36,6 +36,16 @@ namespace Dyplom
             managementsInfoGrid.ItemsSource = db.Management.Local.ToBindingList();
 
             this.Closing += MainWindow_Closing;
+
+
+        }
+
+        private void OpenManagementMenu()
+        {
+            Hide();
+            ManagementMenuWindow w1 = new ManagementMenuWindow();
+            w1.Owner = this;
+            w1.Show();
         }
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -94,6 +104,11 @@ namespace Dyplom
                 }
             }
             db.SaveChanges();
+        }
+
+        private void ManagementPanelBackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OpenManagementMenu();
         }
     }
 }

@@ -5,16 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dyplom"
         mc:Ignorable="d"
-        Title="ControlPanel" Height="430.906" Width="646.31">
+        Title="ControlPanel" Height="450" Width="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="81*"/>
-            <RowDefinition Height="80*"/>
-            <RowDefinition Height="78*"/>
-            <RowDefinition Height="82*"/>
-            <RowDefinition Height="115*"/>
-        </Grid.RowDefinitions>
-        <DataGrid HorizontalAlignment="Left" Height="286" Margin="10,10,0,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="620" SelectionChanged="DataGrid_SelectionChanged"/>
-
+        
     </Grid>
 </Window>

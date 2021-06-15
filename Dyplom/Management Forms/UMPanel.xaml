@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dyplom"
         mc:Ignorable="d"
-        Title="Управление пользователями" Height="380" Width="1473" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Icon="user.png" Background="CadetBlue">
+        Title="Управление пользователями" Height="420" Width="1473" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Icon="user.png" Background="CadetBlue">
     <Grid Margin="0,0,3,0.4">
         <Border x:Name="managementInfoGrid" MinWidth="450" Margin="0,10,219.2,0" Background="#ffffff" VerticalAlignment="Top" HorizontalAlignment="Right" CornerRadius="20" Height="322" Width="477">
             <DataGrid HorizontalAlignment="Left" Height="302" Margin="10,10,0,0" VerticalAlignment="Top" Width="459" SelectionChanged="DataGrid_SelectionChanged" x:Name="managementsInfoGrid" AutoGenerateColumns="False">
@@ -31,6 +31,7 @@
         </Border>
         <Button x:Name="updateBtnLeadTeachers"  HorizontalAlignment="Right" Content="Обновить" Width="160" Height="Auto" Margin="0,22,1274.4,271.4" Click="updateBtnLeadTeachers_Click" Cursor="Hand" Style="{StaticResource MaterialDesignFlatLightBgButton}"/>
         <Button x:Name="deleteBtnLeadTeachers"  HorizontalAlignment="Right" Content="Удалить" Width="160" Height="Auto" Margin="0,98,1274.4,195.4" Click="deleteBtnLeadTeachers_Click" Cursor="Hand" Style="{StaticResource ResourceKey=MaterialDesignFlatLightBgButton}"/>
+        <Button x:Name="ManagementPanelBackBtn" Content="Назад" HorizontalAlignment="Left" Margin="10,353,0,0" VerticalAlignment="Top" Width="102" Height="27" Background="CadetBlue" Click="ManagementPanelBackBtn_Click" BorderBrush="CadetBlue"/>
     </Grid>
 
 </Window>

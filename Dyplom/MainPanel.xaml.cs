@@ -7,6 +7,9 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using Dyplom.Models;
 using System.Data.Entity;
+using Microsoft.Win32;
+using ExcelDataReader;
+using System.Data;
 
 namespace Dyplom
 {
@@ -16,6 +19,8 @@ namespace Dyplom
     public partial class MainPanel : Window
     {
         ModelContext db;
+        private string FileName = string.Empty;
+        private DataTableCollection tableCollection = null;
         public MainPanel()
         {
             InitializeComponent();
@@ -30,7 +35,6 @@ namespace Dyplom
             this.Closing += MainWindow_Closing;
 
         }
-
 
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -264,56 +268,63 @@ namespace Dyplom
 
         }
 
-        private void classesShowBtn_Click(object sender, RoutedEventArgs e)
-        {
-            ModelContext db;
 
-            db = new ModelContext();
-            switch (StudyYearComboBox.SelectedIndex)
-            {
-                case (0):
-                    {
-                        db.Classes.Where(s => s.classid == 1).Load();
-                        break;
-                    }
-                case (1):
-                    {
-                        db.Classes.Where(s => s.StudyYear == 5).Load();
-                        break;
-                    }
-                case (2):
-                    {
-                        db.Classes.Where(s => s.StudyYear == 4).Load();
-                        break;
-                    }
-            }
-
-            switch (GradeSymbolComboBox.SelectedIndex)
-            {
-                case (0):
-                    {
-                        db.Classes.Where(s => s.GradeSymbol == "А").Load();
-                        break;
-                    }
-                case (1):
-                    {
-                        db.Classes.Where(s => s.GradeSymbol == "Б").Load();
-                        break;
-                    }
-                case (2):
-                    {
-                        db.Classes.Where(s => s.GradeSymbol == "В").Load();
-                        break;
-                    }
-            }
-            studentInfoGrid.ItemsSource = db.Students.Local.ToBindingList();
-        }
 
         private void importExcelBtn_Click(object sender, RoutedEventArgs e)
         {
-            OpenExcelImportMenu();
-        }
+            //OpenExcelImportMenu();
 
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "EXCEL файлы(*.xltm;*.xlsx)|*.xltm;*.xlsx" + "|Все файлы (*.*)|*.* ";
+            openFileDialog.CheckFileExists = true;
+            openFileDialog.Multiselect = false;
+            try
+            {
+                if (openFileDialog.ShowDialog() == true)
+                {
+                    FileName = openFileDialog.FileName;
+
+                    OpenExcelFile(FileName);
+                }
+
+                else
+                {
+                    throw new Exception("Файл не выбран!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+        private void OpenExcelFile(string path)
+        {
+            FileStream stream = File.Open(path, FileMode.Open, FileAccess.Read);
+
+            IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream);
+
+            DataSet db = reader.AsDataSet(new ExcelDataSetConfiguration()
+            {
+                ConfigureDataTable = (x) => new ExcelDataTableConfiguration()
+                {
+                    UseHeaderRow = true
+                }
+            });
+
+            tableCollection = db.Tables;
+
+            ExcelImportListComboBox.Items.Clear();
+
+            foreach (DataTable table in tableCollection)
+            {
+                ExcelImportListComboBox.Items.Add(table.TableName);
+            }
+            ExcelImportListComboBox.SelectedIndex = 0;
+
+
+
+
+        }
         private void exportExcelBtn_Click(object sender, RoutedEventArgs e)
         {
             OpenExcelExportMenu();
@@ -321,18 +332,28 @@ namespace Dyplom
 
         private void OpenExcelExportMenu()
         {
-            Hide();
             ExcelImportPanel excelImport = new ExcelImportPanel();
             excelImport.Owner = this;
             excelImport.Show();
         }
 
-        private void OpenExcelImportMenu()
+        private void classesShowBtn_Click(object sender, RoutedEventArgs e)
         {
-            Hide();
+
+        }
+
+        private void ExcelImportListComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataTable table = tableCollection[Convert.ToString(ExcelImportListComboBox.SelectedItem)];
+
+            studentInfoGrid.DataContext = table;
+        }
+
+        /*private void OpenExcelImportMenu()
+        {
             ExcelExportPanel excelExport = new ExcelExportPanel();
             excelExport.Owner = this;
             excelExport.Show();
-        }
+        }*/
     }
 }

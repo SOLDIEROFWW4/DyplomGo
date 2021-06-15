@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dyplom"
         mc:Ignorable="d"
-        Title="Добавление данный из Excel" Height="200" Width="400" Icon="user.png" Background="CadetBlue" WindowStartupLocation="CenterScreen">
+        Title="Добавление данный из Excel" Height="330.733" Width="400" Icon="user.png" Background="CadetBlue" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button x:Name="AddListOfStudentBtn" Content="Добавить список учащихся" HorizontalAlignment="Left" Margin="70,39,0,0" VerticalAlignment="Top" Width="250" Height="100" Background="CadetBlue" Click="AddListOfStudentBtn_Click" BorderBrush="CadetBlue"/>
+        <Button x:Name="MainPanelBackBtn" Content="Назад" HorizontalAlignment="Left" Margin="10,264,0,0" VerticalAlignment="Top" Width="102" Height="27" Background="CadetBlue" Click="MainPanelBackBtn_Click" BorderBrush="CadetBlue"/>
+        <ComboBox x:Name="ExcelImportListComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" SelectionChanged="ExcelImportListComboBox_SelectionChanged"/>
 
     </Grid>
 </Window>

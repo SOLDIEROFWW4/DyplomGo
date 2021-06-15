@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Dyplom"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Рабочая панель" Height="775" Width="1550" Icon="user.png" Background="CadetBlue" WindowStartupLocation="CenterScreen">
+        Title="Рабочая панель" Height="750" Width="1550" Icon="user.png" Background="CadetBlue" WindowStartupLocation="CenterScreen">
 
     <Grid Margin="0,6,0,-5">
         <Grid.ColumnDefinitions>
@@ -60,9 +60,9 @@
             <Button x:Name="updateBtn"  HorizontalAlignment="Right" Content="Обновить" Width="237" Height="Auto" Margin="0,52,554.547,10" Click="updateBtn_Click" Cursor="Hand" Style="{StaticResource MaterialDesignFlatLightBgButton}" Background="CadetBlue" BorderBrush="CadetBlue"/>
             <Button x:Name="deleteBtn"  HorizontalAlignment="Right" Content="Удалить" Width="240" Height="Auto" Margin="0,52,871.8,10.2" Click="deleteBtn_Click" Cursor="Hand" Style="{StaticResource MaterialDesignFlatLightBgButton}" Background="CadetBlue" BorderBrush="CadetBlue"/>
             <Button x:Name="restartBtn" Content="К началу" Height="Auto" Margin="762,52,0,10" Click="restartBtn_Click" Cursor="Hand" Style="{StaticResource MaterialDesignFlatLightBgButton}" HorizontalAlignment="Left" Width="240" BorderBrush="CadetBlue" Background="CadetBlue"/>
-            <Button x:Name="findBtn"  HorizontalAlignment="Right" Content="Найти" Width="243" Height="Auto" Margin="-201,52,1192.8,10.2" Click="findBtn_Click" Cursor="Hand" Style="{StaticResource MaterialDesignFlatLightBgButton}" RenderTransformOrigin="0.502,0.5" Background="CadetBlue" BorderBrush="CadetBlue"/>
+            <Button x:Name="findBtn"  HorizontalAlignment="Right" Content="Найти" Width="243" Height="Auto" Margin="-201,53,1192.547,9.4" Click="findBtn_Click" Cursor="Hand" Style="{StaticResource MaterialDesignFlatLightBgButton}" RenderTransformOrigin="0.502,0.5" Background="CadetBlue" BorderBrush="CadetBlue"/>
         </Grid>
-        <Label Content="Критерии поиска" Margin="10,440,93.8,262.8" Grid.RowSpan="2"/>
+        <Label Content="Критерии поиска" Margin="10,440,93.8,0" Height="90" VerticalAlignment="Top"/>
         <ComboBox x:Name="findComboBox" HorizontalAlignment="Left" Margin="10,9.6,0,0" VerticalAlignment="Top" Width="230" Height="35" Grid.Row="1">
             <ComboBoxItem Content="Имя учащегося" />
             <ComboBoxItem Content="Дата рождения учащегося" />
@@ -140,5 +140,8 @@
         </ComboBox>
         <Button x:Name="classesShowBtn" Content="Показать" HorizontalAlignment="Left" Margin="138,0,0,0" VerticalAlignment="Top" Width="102" Height="27" Background="CadetBlue" Click="classesShowBtn_Click" BorderBrush="CadetBlue"/>
         <Button x:Name="importExcelBtn" Content="Вывод данных из Excel" HorizontalAlignment="Left" Margin="749.2,-2,0,0" VerticalAlignment="Top" Width="185" Height="25" Background="CadetBlue" Click="importExcelBtn_Click" Grid.Column="1" BorderBrush="CadetBlue" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="ExcelImportListComboBox" HorizontalAlignment="Left" Margin="693.2,0,0,0" VerticalAlignment="Top" Width="51" Height="25" Grid.Column="1" SelectionChanged="ExcelImportListComboBox_SelectionChanged">
+        </ComboBox>
+
     </Grid>
 </Window>

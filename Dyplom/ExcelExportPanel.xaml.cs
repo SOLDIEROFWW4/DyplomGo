@@ -24,6 +24,14 @@ namespace Dyplom
             InitializeComponent();
         }
 
+        private void OpenMenu()
+        {
+            Hide();
+            MainPanel w1 = new MainPanel();
+            w1.Owner = this;
+            w1.Show();
+        }
+
         private void SocialPassportExpBtn_Click(object sender, RoutedEventArgs e)
         {
             SocialPassportExpBtn.IsEnabled = false;
@@ -50,6 +58,11 @@ namespace Dyplom
         private void StudentDataExpBtn_Click(object sender, RoutedEventArgs e)
         {
             StudentDataExpBtn.IsEnabled = false;
+        }
+
+        private void MainPanelBackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OpenMenu();
         }
     }
 }

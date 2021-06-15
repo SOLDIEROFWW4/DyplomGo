@@ -9,7 +9,7 @@
     <Grid>
         <Button x:Name="UMPanelBtn" Content="Управление пользователями" HorizontalAlignment="Left" Margin="75,41,0,0" VerticalAlignment="Top" Width="250" Height="100" Background="CadetBlue" Click="UMPanelBtn_Click" BorderBrush="CadetBlue"/>
         <Button x:Name="MainPanelBtn" Content="Основная панель" HorizontalAlignment="Left" Margin="74,161,0,0" VerticalAlignment="Top" Width="250" Height="100" Background="CadetBlue" Click="MainPanelBtn_Click" BorderBrush="CadetBlue"/>
-        <Button x:Name="StatisticPanelBtn" Content="Показать" HorizontalAlignment="Left" Margin="74,281,0,0" VerticalAlignment="Top" Width="250" Height="100" Background="CadetBlue" Click="StatisticPanelBtn_Click" BorderBrush="CadetBlue"/>
+        <Button x:Name="StatisticPanelBtn" Content="Показать отчёты" HorizontalAlignment="Left" Margin="74,281,0,0" VerticalAlignment="Top" Width="250" Height="100" Background="CadetBlue" Click="StatisticPanelBtn_Click" BorderBrush="CadetBlue"/>
 
     </Grid>
 </Window>
