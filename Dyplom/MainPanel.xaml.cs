@@ -21,6 +21,56 @@ namespace Dyplom
         ModelContext db;
         private string FileName = string.Empty;
         private DataTableCollection tableCollection = null;
+
+        private void OpenData()
+        {
+            DataTable table = tableCollection[0];
+            if (table == null) return;
+
+            foreach (DataRow row in table.Rows)
+            {
+                Students s = new Students();
+                try
+                {
+                    s.studentName = row.Field<string>(table.Columns[0].ColumnName);
+                    //s.birthdate = row.Field<DateTime>(table.Columns[1].ColumnName);
+                    s.homeAdressReg = row.Field<string>(table.Columns[2].ColumnName);
+                    s.homeAdressRel = row.Field<string>(table.Columns[3].ColumnName);
+                    s.studentTel = row.Field<object>(table.Columns[4].ColumnName).ToString();
+                    s.motherName = row.Field<string>(table.Columns[5].ColumnName);
+                    s.motherPlaceOfWork = row.Field<string>(table.Columns[6].ColumnName);
+                    s.motherWorkPhone = row.Field<string>(table.Columns[7].ColumnName);
+                    s.motherMobPhone = row.Field<object>(table.Columns[8].ColumnName).ToString();
+                    s.fatherName = row.Field<string>(table.Columns[9].ColumnName);
+                    s.fatherPlaceOfWork = row.Field<string>(table.Columns[10].ColumnName);
+                    s.fatherWorkPhone = row.Field<object>(table.Columns[11].ColumnName).ToString();
+                    s.fatherMobPhone = row.Field<object>(table.Columns[12].ColumnName).ToString();
+                    s.isChildInvalit = Convert.ToBoolean(row.Field<double>(table.Columns[13].ColumnName));
+                    s.isChildWithOPFR = Convert.ToBoolean(row.Field<double>(table.Columns[14].ColumnName));
+                    s.childInCustody = Convert.ToBoolean(row.Field<double>(table.Columns[15].ColumnName));
+                    s.isChildInFosterCare = Convert.ToBoolean(row.Field<double>(table.Columns[16].ColumnName));
+                    s.doesChildStudyAtHome = Convert.ToBoolean(row.Field<double>(table.Columns[17].ColumnName));
+                    s.isChildRegistered = Convert.ToBoolean(row.Field<double>(table.Columns[18].ColumnName));
+                    s.numberOfChildInFamilyUnder18 = Convert.ToInt32(row.Field<double>(table.Columns[19].ColumnName));
+                    s.incompleteFamilyOneMother = Convert.ToBoolean(row.Field<double>(table.Columns[20].ColumnName));
+                    s.incompleteFamilyOneFather = Convert.ToBoolean(row.Field<double>(table.Columns[21].ColumnName));
+                    s.aSingleMother = Convert.ToBoolean(row.Field<double>(table.Columns[22].ColumnName));
+                    s.motherEducation = row.Field<string>(table.Columns[23].ColumnName);
+                    s.fatherEducation = row.Field<string>(table.Columns[24].ColumnName);
+                    s.motherStatus = row.Field<string>(table.Columns[25].ColumnName);
+                    s.fatherStatus = row.Field<string>(table.Columns[26].ColumnName);
+                    s.classid = Convert.ToInt32(row.Field<double>(table.Columns[27].ColumnName));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    continue;
+                }
+                db.Students.Add(s);
+            }
+
+            studentInfoGrid.UpdateLayout();
+        }
         public MainPanel()
         {
             InitializeComponent();
@@ -313,16 +363,7 @@ namespace Dyplom
 
             tableCollection = db.Tables;
 
-            ExcelImportListComboBox.Items.Clear();
-
-            foreach (DataTable table in tableCollection)
-            {
-                ExcelImportListComboBox.Items.Add(table.TableName);
-            }
-            ExcelImportListComboBox.SelectedIndex = 0;
-
-
-
+            OpenData();
 
         }
         private void exportExcelBtn_Click(object sender, RoutedEventArgs e)
